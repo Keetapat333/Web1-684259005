@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heading</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+        * {
+            font-family: "Roboto Mono", monospace;
+            box-sizing: border-box;
+            margin: 0;
+
+        }
+
+        body {
+            background-image: url("https://conroycreativecounsel.com/wp-content/uploads/2023/10/02-hero-image.jpeg");
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            border: solid 10px rgb(180, 180, 180);
+            padding: 3rem;
+            border-radius: 20px;
+            line-height: 1.5;
+            margin: 5rem 0rem;
+            background-color: rgb(247, 241, 234);
+            width: 1000px;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+
+        .text-title {
+            color: rgb(255, 0, 106);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .card {
+            background-color: rgb(255, 255, 255);
+            border-radius: 15px;
+            padding: 10px 20px;
+            margin: 20px 10px;
+            border-top: solid 10px rgb(206, 15, 158);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            line-height: 1.8;
+        }
+
+        pre {
+            background-color: rgb(227, 228, 228);
+            border-radius: 10px;
+            padding: 5px 10px;
+            border-left: solid 5px rgb(206, 15, 158);
+            font-size: 16px;
+        }
+
+        .note {
+            color: purple;
+            background-color: yellowgreen;
+        }
+
+        .note::before {
+            content: "📌";
+        }
+
+        .header {
+            background: linear-gradient(to right, #798bec, #f0707077);
+            padding: 10px;
+            text-align: center;
+        }
+
+        section a h2 {
+            color: black;
+        }
+
+        .hero {
+            padding: 10px 0;
+            margin: 20px 0;
+        }
+
+        .h1-label {
+            background-color: red;
+            color: white;
+            padding: 3px;
+            border-radius: 10px;
+
+        }
+
+        .h2-label {
+            background-color: rgb(0, 173, 241);
+            color: white;
+            padding: 3px;
+            border-radius: 10px;
+
+        }
+
+        .h3-label {
+            background-color: rgb(14, 29, 235);
+            color: white;
+            padding: 3px;
+            border-radius: 10px;
+
+        }
+
+        .h4-label {
+            background-color: rgb(171, 209, 0);
+            color: white;
+            padding: 3px;
+            border-radius: 10px;
+
+        }
+
+        .h5-label {
+            background-color: rgb(216, 0, 169);
+            color: white;
+            padding: 3px;
+            border-radius: 10px;
+
+        }
+
+        .h6-label {
+            background-color: rgb(43, 255, 0);
+            color: white;
+            padding: 3px;
+            border-radius: 10px;
+        }
+
+        ul li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="header">
+        <h1>เรียนรู้เว็บเบื้องต้น</h1>
+        <a style="text-decoration: none; " href="index.html">
+            <h2>Home</h2>
+        </a>
+
+    </section>
+
+    <div class="box">
+        <div class="container">
+            <div class="hero">
+                <h1>Workshop: HTML Heading</h1>
+                <p>ฝึกใช้แท็ก
+                    &lt;h1&gt
+                    &lt;h6&gt และการปรับขนาดหัวข้อด้วย CSS</p>
+            </div>
+            <hr>
+            <div class="card">
+                <h2> 1. ความหมายของ Headings (H1–H6)</h2>
+                <p>HTML มีหัวข้อทั้งหมด 6 ระดับ</p>
+                <ul>
+                    <li> <span class="h1-label">H1</span> – หัวข้อใหญ่สุด ใช้สำหรับชื่อหน้าเว็บหรือหัวข้อหลักH1
+                    </li>
+                    <li><span class="h2-label">H2</span> – หัวข้อรอง แบ่ง Section ของเนื้อหา</li>
+                    <li><span class="h3-label">H3</span> – หัวข้อย่อยภายใน H2</li>
+                    <li><span class="h4-label">H4</span> – ย่อยลงไปอีกระดับ</li>
+                    <li><span class="h5-label">H5</span> – ใช้น้อย แต่เน้นลำดับข้อมูล</li>
+                    <li><span class="h6-label">H6</span> – เล็กสุด ใช้กับหัวข้อระดับลึก</li>
+                </ul>
+                <p class="note"
+                    style="border-left: 3px solid rgba(206, 5, 5, 0.692); background-color: rgb(225, 238, 51); padding: 2px 3px;">
+                    H1
+                    ควรมีเพียง 1
+                    อันในแต่ละหน้า เพื่อช่วย
+                    SEO
+                    และโครงสร้างเอกสาร</p>
+            </div>
+
+            <hr>
+
+            <div class="card">
+                <h2>2. ตัวอย่างการใช ้H1–H6
+                </h2>
+                <pre>
+<code>
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;h2&gt;HTML Basics&lt;/h2&gt;
+    &lt;h3&gt;What is HTML?&lt;/h3&gt;
+    &lt;h4&gt;HTML Syntax&lt;/h4&gt;
+    &lt;h5&gt;Example Code&lt;/h5&gt;
+    &lt;h6&gt;Note: Case Sensitive&lt;/h6&gt;
+</code>
+        </pre>
+                <h1>H1: Welcome to My Website
+                </h1>
+                <h2>H2: HTML Basics
+                </h2>
+                <h3>H3: What is HTML
+                </h3>
+                <h4>H4: HTML Syntax
+                </h4>
+                <h5>H5: Example Code
+                </h5>
+                <h6 class="note">H6: Note about heading size
+                </h6>
+            </div>
+            <div style="text-align: right;">
+                <a style="text-decoration: none; " href="index.html">Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
