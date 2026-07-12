@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>แบบฝึกปฏิบัติ: HTML Formatting</title>
+  <style>
+    /* Google font (same look as other pages) */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+    * { box-sizing: border-box; }
+    body { font-family: 'Roboto Mono', monospace; background: #e6f6fb; margin: 0; }
+
+    /* Header */
+    .site-header { background: linear-gradient(90deg,#0d47a1,#1976d2); color: #fff; padding: 12px 20px; display:flex; align-items:center; justify-content:space-between; }
+    .brand { display:flex; gap:12px; align-items:center; }
+    .logo { width:44px; height:44px; background:#ff2a6a; border-radius:6px; }
+    nav a { color:#fff; margin-left:12px; text-decoration:none; font-weight:600; }
+    nav a:hover { text-decoration: underline; }
+
+    /* Page layout */
+    .box { display:flex; justify-content:center; }
+    .containner { padding:18px; border: 2px solid #51afee; width:95%; max-width:1100px; border-radius:12px; margin:14px auto; background:#fff; }
+
+    /* Title box */
+    .page-title { border:2px solid #c62828; padding:12px; background:#fff; border-radius:6px; }
+    .page-title h1 { margin:0; font-size:28px; }
+    .page-title p { margin:6px 0 0 0; color:#444; }
+
+    /* Workshop area */
+    .workshop-wrap { background:#dff7d8; padding:14px; border-radius:6px; margin-top:12px; }
+    .cards { display:flex; gap:14px; flex-wrap:wrap; }
+    .card { background:#fff; border:2px solid #b60f4b; border-radius:8px; padding:10px; flex:1 1 30%; min-width:220px; box-shadow:0 6px 12px rgba(0,0,0,0.08); }
+    .card pre { background:#f4f4f4; padding:8px; border-left:4px solid #ce0f9e; overflow:auto; }
+
+    .knowledge { background:#fff; border:2px solid #c62828; padding:10px; border-radius:6px; margin-top:12px; }
+    .footer-box { border:2px solid #c62828; padding:10px; margin-top:12px; border-radius:6px; background:#fff; }
+    .top-links { text-align:right; }
+    .top-links a { color:#c62828; text-decoration:none; }
+    .top-links a:hover { text-decoration:underline; }
+
+    /* Small screens */
+    @media (max-width: 800px) { .cards { flex-direction:column; } }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo"></div>
+      <div>
+        <div style="font-weight:700;">เรียนรู้เว็บเบื้องต้น</div>
+        <div style="font-size:12px;">Basic Web Development</div>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="W03-01-heading.html">Heading</a>
+      <a href="formatting.html">Formatting</a>
+      <a href="#">Links</a>
+    </nav>
+  </header>
+
+  <div class="box">
+    <div class="containner">
+
+      <div class="page-title">
+        <h1>แบบฝึกปฏิบัติ: HTML Formatting</h1>
+        <p>เรียนรู้การจัดรูปแบบข้อความด้วยแท็ก HTML พร้อมตัวอย่างและการตกแต่งด้วย CSS</p>
+      </div>
+
+      <div class="workshop-wrap">
+        <div class="cards">
+          <div class="card">
+            <h3>ตัวอย่างผลลัพธ์</h3>
+            <ul>
+              <li><strong>B:</strong> ข้อความตัวหนา</li>
+              <li><em>I:</em> ข้อความตัวเอียง</li>
+              <li><mark>MARK:</mark> ข้อความเน้น</li>
+              <li><small>SMALL:</small> ข้อความขนาดเล็ก</li>
+              <li><del>DEL:</del> ข้อความถูกลบ</li>
+              <li>SUP: x<sup>2</sup> &nbsp; SUB: H<sub>2</sub>O</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>โค้ด HTML</h3>
+            <pre>&lt;strong&gt;ข้อความสำคัญ&lt;/strong&gt;
+&lt;em&gt;ข้อความเน้น&lt;/em&gt;
+&lt;mark&gt;ข้อความที่ต้องการเน้น&lt;/mark&gt;
+&lt;small&gt;ข้อความขนาดเล็ก&lt;/small&gt;
+&lt;del&gt;ข้อความที่ถูกลบ&lt;/del&gt;
+&lt;sup&gt;2&lt;/sup&gt; &lt;sub&gt;2&lt;/sub&gt;</pre>
+          </div>
+
+          <div class="card">
+            <h3>กิจกรรม</h3>
+            <ul>
+              <li>ให้นักศึกษาสร้างหน้าเว็บ 1 หน้า</li>
+              <li>ใช้แท็ก formatting อย่างน้อย 6 รูปแบบ</li>
+              <li>เทียบผลลัพธ์ของ &lt;b&gt; กับ &lt;strong&gt; และ &lt;i&gt; กับ &lt;em&gt;</li>
+              <li>ปรับสี ขนาด และพื้นหลังด้วย CSS</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="knowledge">
+          <h3>เกร็ดความรู้</h3>
+          <p>แท็กจัดรูปแบบข้อความช่วยให้เนื้อหาสื่อสารเจตนาและความหมายมากขึ้น เช่น &lt;strong&gt; ใช้สำหรับข้อความสำคัญ และ &lt;em&gt; ใช้เน้นความสำคัญหรืออารมณ์</p>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <p>Copyright © 2026 Suksawat Saelim. All rights reserved.</p>
+        <div style="text-align:right; margin-top:6px;"><a class="top-links" href="index.html">Back to Home</a></div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
