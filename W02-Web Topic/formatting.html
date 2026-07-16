@@ -8,39 +8,270 @@
   <style>
     /* Google font (same look as other pages) */
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
-    * { box-sizing: border-box; }
-    body { font-family: 'Roboto Mono', monospace; background: #e6f6fb; margin: 0; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto Mono', monospace;
+      background: #e6f6fb;
+      margin: 0;
+    }
 
     /* Header */
-    .site-header { background: linear-gradient(90deg,#0d47a1,#1976d2); color: #fff; padding: 12px 20px; display:flex; align-items:center; justify-content:space-between; }
-    .brand { display:flex; gap:12px; align-items:center; }
-    .logo { width:44px; height:44px; background:#ff2a6a; border-radius:6px; }
-    nav a { color:#fff; margin-left:12px; text-decoration:none; font-weight:600; }
-    nav a:hover { text-decoration: underline; }
+    .site-header {
+      background: linear-gradient(90deg, #0d47a1, #1976d2);
+      color: #fff;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .logo {
+      width: 44px;
+      height: 44px;
+      background: #ff2a6a;
+      border-radius: 6px;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 12px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
 
     /* Page layout */
-    .box { display:flex; justify-content:center; }
-    .containner { padding:18px; border: 2px solid #51afee; width:95%; max-width:1100px; border-radius:12px; margin:14px auto; background:#fff; }
+    .box {
+      display: flex;
+      justify-content: center;
+    }
+
+    .containner {
+      padding: 40px;
+      border: 2px solid #51afee;
+      width: 95%;
+      /* max-width: 1100px; */
+      border-radius: 12px;
+      margin: 14px auto;
+      background: #fff;
+    }
 
     /* Title box */
-    .page-title { border:2px solid #c62828; padding:12px; background:#fff; border-radius:6px; }
-    .page-title h1 { margin:0; font-size:28px; }
-    .page-title p { margin:6px 0 0 0; color:#444; }
+    .page-title {
+      /* border: 2px solid #c62828; */
+      /* margin: 20px; */
+      padding: 12px;
+      background: #fff;
+      border-radius: 6px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .page-title h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #0a2f66;
+    }
+
+    .page-title p {
+      font-size: 20px;
+      margin: 6px 0 0 0;
+      color: #0a2f66;
+    }
+
+    .hero-icon {
+      background-color: #0d47a1;
+      color: #fff;
+      border-radius: 15px;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 35px;
+      font-weight: bold;
+      padding: 5px;
+    }
+
+    .label {
+      background-color: red;
+      padding: 2px;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .b-label {
+      background-color: rgb(32, 6, 151);
+    }
+
+    .strong-label {
+      background-color: rgb(54, 192, 0);
+    }
+
+    .i-label {
+      background-color: rgb(133, 24, 78);
+    }
+
+    .em-label {
+      background-color: rgb(133, 97, 118);
+    }
+
+    .u-label {
+      background-color: rgb(151, 90, 33);
+    }
+
+    .mark-label {
+      background-color: rgb(119, 99, 190);
+    }
+
+    .small-label {
+      background-color: rgb(44, 151, 119);
+    }
+
+    .del-label {
+      background-color: rgb(167, 159, 58);
+    }
+
+    .sup-label {
+      background-color: rgb(170, 104, 201);
+    }
+
+    .sub-label {
+      background-color: rgb(218, 50, 100);
+    }
+
+    /* card 2 */
+    .pre-box {
+      background-color: rgb(24, 9, 9);
+      border-radius: 10px;
+      color: rgb(209, 209, 209);
+      padding: 18px;
+    }
+
+    .html-tag {
+      color: green;
+    }
+
+    .line-no {
+      color: red;
+      display: inline-block;
+      width: 20px;
+    }
 
     /* Workshop area */
-    .workshop-wrap { background:#dff7d8; padding:14px; border-radius:6px; margin-top:12px; }
-    .cards { display:flex; gap:14px; flex-wrap:wrap; }
-    .card { background:#fff; border:2px solid #b60f4b; border-radius:8px; padding:10px; flex:1 1 30%; min-width:220px; box-shadow:0 6px 12px rgba(0,0,0,0.08); }
-    .card pre { background:#f4f4f4; padding:8px; border-left:4px solid #ce0f9e; overflow:auto; }
+    .workshop-wrap {
+      /* background: #dff7d8; */
+      padding: 14px;
+      border-radius: 6px;
+      margin-top: 12px;
+    }
 
-    .knowledge { background:#fff; border:2px solid #c62828; padding:10px; border-radius:6px; margin-top:12px; }
-    .footer-box { border:2px solid #c62828; padding:10px; margin-top:12px; border-radius:6px; background:#fff; }
-    .top-links { text-align:right; }
-    .top-links a { color:#c62828; text-decoration:none; }
-    .top-links a:hover { text-decoration:underline; }
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      /* background-color: #fffb2c; */
+      gap: 20px;
+      padding: 10px;
+    }
+
+    .card {
+      background: #fff;
+      border: 4px solid #3a8dc4;
+      border-radius: 16px;
+      flex: 1 1 30%;
+      min-width: 220px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.09);
+      overflow: hidden;
+    }
+
+    .card-body {
+      padding: 12px;
+    }
+
+    .format-row {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 8px;
+
+      border-bottom: 1px solid black;
+      padding-bottom: 8px;
+    }
+
+    .card-header {
+      padding: 20px;
+      background-color: #4ca9ff;
+      color: rgb(9, 66, 139);
+      font-size: 18px;
+      font-weight: bold;
+      border-bottom: 1px solid #4ca9ff;
+    }
+
+    .icon-card-header {
+      color: white;
+      background-color: #0b3d88;
+      border-radius: 50%;
+      display: inline-flex;
+      width: 30px;
+      height: 30px;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+
+    .knowledge {
+      background: #fff;
+      border: 2px solid #c62828;
+      padding: 10px;
+      border-radius: 6px;
+      margin-top: 12px;
+    }
+
+    .footer-box {
+      border: 2px solid #c62828;
+      padding: 10px;
+      margin-top: 12px;
+      border-radius: 6px;
+      background: #fff;
+    }
+
+    .top-links {
+      text-align: right;
+    }
+
+    .top-links a {
+      color: #c62828;
+      text-decoration: none;
+    }
+
+    .top-links a:hover {
+      text-decoration: underline;
+    }
 
     /* Small screens */
-    @media (max-width: 800px) { .cards { flex-direction:column; } }
+    @media (max-width: 800px) {
+      .cards {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 
@@ -65,48 +296,145 @@
     <div class="containner">
 
       <div class="page-title">
+        <div class="hero-icon">&lt;/&gt;</div>
         <h1>แบบฝึกปฏิบัติ: HTML Formatting</h1>
         <p>เรียนรู้การจัดรูปแบบข้อความด้วยแท็ก HTML พร้อมตัวอย่างและการตกแต่งด้วย CSS</p>
       </div>
 
       <div class="workshop-wrap">
-        <div class="cards">
+        <div class="card-grid">
+          <!-- card 1 -->
           <div class="card">
-            <h3>ตัวอย่างผลลัพธ์</h3>
-            <ul>
-              <li><strong>B:</strong> ข้อความตัวหนา</li>
-              <li><em>I:</em> ข้อความตัวเอียง</li>
-              <li><mark>MARK:</mark> ข้อความเน้น</li>
-              <li><small>SMALL:</small> ข้อความขนาดเล็ก</li>
-              <li><del>DEL:</del> ข้อความถูกลบ</li>
-              <li>SUP: x<sup>2</sup> &nbsp; SUB: H<sub>2</sub>O</li>
-            </ul>
-          </div>
 
-          <div class="card">
-            <h3>โค้ด HTML</h3>
-            <pre>&lt;strong&gt;ข้อความสำคัญ&lt;/strong&gt;
-&lt;em&gt;ข้อความเน้น&lt;/em&gt;
-&lt;mark&gt;ข้อความที่ต้องการเน้น&lt;/mark&gt;
-&lt;small&gt;ข้อความขนาดเล็ก&lt;/small&gt;
-&lt;del&gt;ข้อความที่ถูกลบ&lt;/del&gt;
-&lt;sup&gt;2&lt;/sup&gt; &lt;sub&gt;2&lt;/sub&gt;</pre>
-          </div>
+            <div class="card-header">
+              <span class="icon-card-header">🖥</span> ตัวอย่างผลลัพธ์
+            </div>
 
+            <div class="card-body">
+              <div class="format-row">
+                <span class="label b-label">B:</span>
+                <b>ข้อความตัวหนา</b>
+              </div>
+
+              <div class="format-row">
+                <span class="label strong-label">STRONG:</span>
+                <strong>ข้อความสำคัญ</strong>
+              </div>
+              <div class="format-row">
+                <span class="label i-label">I:</span>
+                <i>ข้อความตัวเอียง</i>
+              </div>
+
+              <div class="format-row">
+                <span class="label em-label">EM:</span>
+                <em>ข้อความเน้นเสียง</em>
+              </div>
+
+              <div class="format-row">
+                <span class="label u-label">U:</span>
+                <u>ข้อความขีดเส้นใต้</u>
+              </div>
+
+              <div class="format-row">
+                <span class="label mark-label">MARK:</span>
+                <mark>ข้อความที่ถูกเน้น</mark>
+              </div>
+
+              <div class="format-row">
+                <span class="label small-label">SMALL:</span>
+                <small>ข้อความขนาดเล็ก</small>
+              </div>
+
+              <div class="format-row">
+                <span class="label del-label">DEL:</span>
+                <del>ข้อความที่ถูกลบ</del>
+              </div>
+
+              <div class="format-row">
+                <span class="label sup-label">SUP:</span>
+                <span>x<sup>2</sup></span>
+              </div>
+
+              <div class="format-row">
+                <span class="label sub-label">SUB:</span>
+                <span>H<sub>2</sub>O</span>
+              </div>
+            </div>
+
+          </div>
+          <!-- card 2 -->
           <div class="card">
-            <h3>กิจกรรม</h3>
-            <ul>
-              <li>ให้นักศึกษาสร้างหน้าเว็บ 1 หน้า</li>
-              <li>ใช้แท็ก formatting อย่างน้อย 6 รูปแบบ</li>
-              <li>เทียบผลลัพธ์ของ &lt;b&gt; กับ &lt;strong&gt; และ &lt;i&gt; กับ &lt;em&gt;</li>
-              <li>ปรับสี ขนาด และพื้นหลังด้วย CSS</li>
+            <div class="card-header">
+              <span class="icon-card-header">&lt;/&gt;</span>
+              ตัวอย่างโค้ด HTML
+            </div>
+            <div class="card-body">
+              <div class="pre-box">
+                <pre>
+<span class="line-no">1</span><span class="html-tag">&lt;b&gt;</span><span>ข้อความตัวหนา</span><span class="html-tag">&lt;/b&gt;</span>
+<span class="line-no">2</span><span class="html-tag">&lt;strong&gt;</span><span>ข้อความสำคัญ</span><span class="html-tag">&lt;/strong&gt;</span>
+<span class="line-no">3</span><span class="html-tag">&lt;i&gt;</span><span>ข้อความตัวเอียง</span><span class="html-tag">&lt;/i&gt;</span>
+<span class="line-no">4</span><span class="html-tag">&lt;em&gt;</span><span>ข้อความเน้นเสียง</span><span class="html-tag">&lt;/em&gt;</span>
+<span class="line-no">5</span><span class="html-tag">&lt;u&gt;</span><span>ข้อความขีดเส้นใต้</span><span class="html-tag">&lt;/u&gt;</span>
+<span class="line-no">6</span><span class="html-tag">&lt;mark&gt;</span><span>ข้อความที่ถูกเน้น</span><span class="html-tag">&lt;/mark&gt;</span>
+<span class="line-no">7</span><span class="html-tag">&lt;small&gt;</span><span>ข้อความขนาดเล็ก</span><span class="html-tag">&lt;/small&gt;</span>
+<span class="line-no">8</span><span class="html-tag">&lt;del&gt;</span><span>ข้อความที่ถูกลบ</span><span class="html-tag">&lt;/del&gt;</span>
+<span class="line-no">9</span><span>x</span><span class="html-tag">&lt;sup&gt;</span><span>2</span><span class="html-tag">&lt;/sup&gt;</span>
+<span class="line-no">10</span><span>H</span><span class="html-tag">&lt;sub&gt;</span><span>2</span><span class="html-tag">&lt;/sub&gt;</span><span>O</span>
+                  </pre>
+              </div>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="card">
+            <span>🎯</span>
+
+            กิจกรรมฝึกปฏิบัติ
+
+
+            <ul class="">
+              <li>
+                <span>✓</span>
+                <span>ให้นักศึกษาสร้างหน้าเว็บ 1 หน้า</span>
+              </li>
+
+              <li>
+                <span>✓</span>
+                <span>ใช้แท็ก formatting อย่างน้อย 6 รูปแบบ</span>
+              </li>
+
+              <li>
+                <span>✓</span>
+                <span>
+                  ทดลองเปรียบเทียบ
+                  <span>&lt;b&gt;</span> กับ
+                  <span>&lt;strong&gt;</span>
+                  และ
+                  <span>&lt;i&gt;</span> กับ
+                  <span>&lt;em&gt;</span>
+                </span>
+              </li>
+
+              <li>
+                <span>✓</span>
+                <span>ปรับสี ขนาด และพื้นหลังบางข้อความด้วย CSS</span>
+              </li>
+
+              <li>
+                <span>✓</span>
+                <span>
+                  บันทึกไฟล์ชื่อ
+                  <span>formatting.html</span>
+                </span>
+              </li>
             </ul>
           </div>
         </div>
 
         <div class="knowledge">
           <h3>เกร็ดความรู้</h3>
-          <p>แท็กจัดรูปแบบข้อความช่วยให้เนื้อหาสื่อสารเจตนาและความหมายมากขึ้น เช่น &lt;strong&gt; ใช้สำหรับข้อความสำคัญ และ &lt;em&gt; ใช้เน้นความสำคัญหรืออารมณ์</p>
+          <p>แท็กจัดรูปแบบข้อความช่วยให้เนื้อหาสื่อสารเจตนาและความหมายมากขึ้น เช่น &lt;strong&gt; ใช้สำหรับข้อความสำคัญ
+            และ &lt;em&gt; ใช้เน้นความสำคัญหรืออารมณ์</p>
         </div>
       </div>
 
