@@ -189,7 +189,7 @@
       padding: 10px;
     }
 
-    .card {
+    .box-card {
       background: #fff;
       border: 4px solid #3a8dc4;
       border-radius: 16px;
@@ -199,8 +199,55 @@
       overflow: hidden;
     }
 
-    .card-body {
+    .box-content {
       padding: 12px;
+    }
+
+    .box-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .box-content li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 10px 0;
+      border-bottom: 1px dashed #d8eaf5;
+    }
+
+    .box-content li:last-child {
+      border-bottom: none;
+    }
+
+    .box-content li span:first-child {
+      display: inline-flex;
+      width: 24px;
+      height: 24px;
+      align-items: center;
+      justify-content: center;
+      background: #0d47a1;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 14px;
+      margin-top: 2px;
+    }
+
+    .activity-card .box-content li span:first-child {
+      background: #1e88e5;
+    }
+
+    .activity-card .box-content li:nth-child(3) span:first-child {
+      background: #43a047;
+    }
+
+    .activity-card .box-content li:nth-child(4) span:first-child {
+      background: #fb8c00;
+    }
+
+    .activity-card .box-content li:nth-child(5) span:first-child {
+      background: #8e24aa;
     }
 
     .format-row {
@@ -215,17 +262,25 @@
       padding-bottom: 8px;
     }
 
-    .card-header {
+    .box-header {
       padding: 20px;
       background-color: #4ca9ff;
       color: rgb(9, 66, 139);
       font-size: 18px;
       font-weight: bold;
       border-bottom: 1px solid #4ca9ff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    .icon-card-header {
-      color: white;
+    .activity-card .box-header {
+      background-color: #4ca9ff;
+      color: #4e2db8;
+    }
+
+    .box-icon {
+      color: rgb(255, 255, 255);
       background-color: #0b3d88;
       border-radius: 50%;
       display: inline-flex;
@@ -235,14 +290,15 @@
       align-items: center;
     }
 
+    .activity-card .box-icon {
+      background-color: #4e2db8;
+    }
 
 
-    .knowledge {
-      background: #fff;
-      border: 2px solid #c62828;
-      padding: 10px;
-      border-radius: 6px;
-      margin-top: 12px;
+    .knowledge p {
+      margin: 0;
+      color: #333;
+      line-height: 1.6;
     }
 
     .footer-box {
@@ -272,6 +328,37 @@
         flex-direction: column;
       }
     }
+
+    .note-box {
+      margin-top: 20px;
+    }
+
+    .tip-box {
+      background: #fff7df;
+      border: 1px solid #facc15;
+      border-radius: 18px;
+      padding: 24px 30px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .tip-icon {
+      font-size: 30px;
+      background-color: #facc15;
+      color: #fff;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .mark {
+      color: #0771b8;
+    }
+
   </style>
 </head>
 
@@ -304,13 +391,13 @@
       <div class="workshop-wrap">
         <div class="card-grid">
           <!-- card 1 -->
-          <div class="card">
+          <div class="box-card">
 
-            <div class="card-header">
-              <span class="icon-card-header">🖥</span> ตัวอย่างผลลัพธ์
+            <div class="box-header">
+              <span class="box-icon">🖥</span> ตัวอย่างผลลัพธ์
             </div>
 
-            <div class="card-body">
+            <div class="box-content">
               <div class="format-row">
                 <span class="label b-label">B:</span>
                 <b>ข้อความตัวหนา</b>
@@ -363,12 +450,12 @@
 
           </div>
           <!-- card 2 -->
-          <div class="card">
-            <div class="card-header">
-              <span class="icon-card-header">&lt;/&gt;</span>
+          <div class="box-card">
+            <div class="box-header">
+              <span class="box-icon">&lt;/&gt;</span>
               ตัวอย่างโค้ด HTML
             </div>
-            <div class="card-body">
+            <div class="box-content">
               <div class="pre-box">
                 <pre>
 <span class="line-no">1</span><span class="html-tag">&lt;b&gt;</span><span>ข้อความตัวหนา</span><span class="html-tag">&lt;/b&gt;</span>
@@ -386,65 +473,60 @@
             </div>
           </div>
           <!-- card 3 -->
-          <div class="card">
-            <span>🎯</span>
+          <div class="box-card activity-card">
+            <div class="box-header">
+              <span class="box-icon">🎯</span>
+              กิจกรรมฝึกปฏิบัติ
+            </div>
+            <div class="box-content">
+              <ul class="">
+                <li>
+                  <span>✓</span>
+                  <span>สร้างหน้าเว็บ 1 หน้า</span>
+                </li>
 
-            กิจกรรมฝึกปฏิบัติ
+                <li>
+                  <span>✓</span>
+                  <span>ใช้แท็ก formatting อย่างน้อย 6 รูปแบบ</span>
+                </li>
 
+                <li>
+                  <span>✓</span>
+                  <span>เปรียบเทียบ <strong class="mark">&lt;b&gt;</strong> กับ <strong class="mark">&lt;strong&gt;</strong> และ <strong class="mark">&lt;i&gt;</strong> กับ <strong class="mark">&lt;em&gt;</strong></span>
+                </li>
 
-            <ul class="">
-              <li>
-                <span>✓</span>
-                <span>ให้นักศึกษาสร้างหน้าเว็บ 1 หน้า</span>
-              </li>
+                <li>
+                  <span>✓</span>
+                  <span>ปรับสีและขนาดข้อความด้วย CSS</span>
+                </li>
 
-              <li>
-                <span>✓</span>
-                <span>ใช้แท็ก formatting อย่างน้อย 6 รูปแบบ</span>
-              </li>
-
-              <li>
-                <span>✓</span>
-                <span>
-                  ทดลองเปรียบเทียบ
-                  <span>&lt;b&gt;</span> กับ
-                  <span>&lt;strong&gt;</span>
-                  และ
-                  <span>&lt;i&gt;</span> กับ
-                  <span>&lt;em&gt;</span>
-                </span>
-              </li>
-
-              <li>
-                <span>✓</span>
-                <span>ปรับสี ขนาด และพื้นหลังบางข้อความด้วย CSS</span>
-              </li>
-
-              <li>
-                <span>✓</span>
-                <span>
-                  บันทึกไฟล์ชื่อ
-                  <span>formatting.html</span>
-                </span>
-              </li>
-            </ul>
+                <li>
+                  <span>✓</span>
+                  <span>บันทึกชื่อไฟล์ว่า <strong class="mark">formatting.html</strong></span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div class="knowledge">
-          <h3>เกร็ดความรู้</h3>
-          <p>แท็กจัดรูปแบบข้อความช่วยให้เนื้อหาสื่อสารเจตนาและความหมายมากขึ้น เช่น &lt;strong&gt; ใช้สำหรับข้อความสำคัญ
-            และ &lt;em&gt; ใช้เน้นความสำคัญหรืออารมณ์</p>
+        <div class="note-box">
+          <section class="tip-box">
+            <div class="tip-icon">💡</div>
+            <div>
+              <h2>เกร็ดความรู้</h2>
+              <p>แท็กจัดรูปแบบข้อความช่วยให้เนื้อหาสื่อสารชัดเจนและมีความหมายมากขึ้น เช่น <strong class="mark">&lt;strong&gt;</strong> ใช้สำหรับข้อความที่สำคัญ และ <strong  class="mark">&lt;em&gt;</strong> ใช้สำหรับข้อความที่เน้นความสำคัญหรืออารมณ์ และ <strong class="mark">&lt;mark&gt;</strong> ใช้เน้นข้อความที่ต้องการให้โดดเด่น แท็กเหล่านี้ช่วยเพิ่มความอ่านง่ายและจัดระเบียบเนื้อหาให้ผู้ใช้งานเข้าใจได้ง่ายขี้น</p>
+            </div>
+          </section>
         </div>
-      </div>
 
-      <div class="footer-box">
-        <p>Copyright © 2026 Suksawat Saelim. All rights reserved.</p>
-        <div style="text-align:right; margin-top:6px;"><a class="top-links" href="index.html">Back to Home</a></div>
-      </div>
 
+        <div class="footer-box">
+          <p>Copyright © 2026 Suksawat Saelim. All rights reserved.</p>
+          <div style="text-align:right; margin-top:6px;"><a class="top-links" href="index.html">Back to Home</a></div>
+        </div>
+
+      </div>
     </div>
-  </div>
 
 </body>
 
