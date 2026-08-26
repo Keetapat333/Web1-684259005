@@ -198,7 +198,6 @@ body {
   background: #6cb6ff;
 }
 
-
 .code-box {
   min-height: 140px;
   margin: 0;
@@ -322,8 +321,8 @@ body {
   color: #927000;
 }
 .submit-card {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
   background: #fff0b8;
   border: 1px solid #f2cd50;
   border-radius: 7px;
@@ -334,13 +333,13 @@ body {
 }
 
 .submit-icon {
-    font-size: 28px;
-    margin-right: 12px;
-    color: #00a62f;
+  font-size: 28px;
+  margin-right: 12px;
+  color: #00a62f;
 }
 
-.submit-icon:hover  {
-    transform: scale(1.2);
+.submit-icon:hover {
+  transform: scale(1.2);
 }
 
 .submit-card small {
@@ -380,7 +379,10 @@ body {
   font-family: Georgia, serif;
   font-weight: bold;
 }
-.tip-content { flex: 1; min-width: 0; }
+.tip-content {
+  flex: 1;
+  min-width: 0;
+}
 .tip-box strong {
   color: #0755aa;
   font-size: 14px;
@@ -415,7 +417,7 @@ body {
 }
 
 .tip-box span {
-    color: red;
+  color: red;
 }
 
 @media (max-width: 760px) {
@@ -440,7 +442,19 @@ body {
   .right-sidebar {
     margin-top: 12px;
   }
-  .tip-box { align-items: flex-start; gap: 12px; padding: 14px; font-size: 11px; }
-  .tip-icon { flex-basis: 46px; width: 46px; height: 46px; font-size: 29px; }
-  .tip-symbols { display: none; }
+  .tip-box {
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px;
+    font-size: 11px;
+  }
+  .tip-icon {
+    flex-basis: 46px;
+    width: 46px;
+    height: 46px;
+    font-size: 29px;
+  }
+  .tip-symbols {
+    display: none;
+  }
 }
