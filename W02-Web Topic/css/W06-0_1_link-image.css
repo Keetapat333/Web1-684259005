@@ -261,10 +261,23 @@ body {
 }
 .side-card li {
   margin-bottom: 6px;
-}
-.side-card li::marker {
-  color: #2875dd;
   font-weight: bold;
+}
+
+.side-card li:nth-child(1)::marker {
+  color: #20b765;
+}
+.side-card li:nth-child(2)::marker {
+  color: #b41a15;
+}
+.side-card li:nth-child(3)::marker {
+  color: #8f9900;
+}
+
+
+
+.activity-card li:nth-child(1)::marker {
+  color: #3493e0;
 }
 .activity-card li:nth-child(2)::marker {
   color: #20b765;
