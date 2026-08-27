@@ -452,19 +452,32 @@ body {
     width: max-content;
   }
   .hero {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
     gap: 12px;
+    text-align: center;
   }
+  
   .hero-photo {
-    display: none;
+    /* display: none; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
+
+  .hero-text {
+  }
+
   .right-sidebar {
     margin-top: 12px;
   }
   .tip-box {
-    align-items: flex-start;
     gap: 12px;
     padding: 14px;
     font-size: 11px;
+    margin-top: 12px;
   }
   .tip-icon {
     flex-basis: 46px;
@@ -472,6 +485,11 @@ body {
     height: 46px;
     font-size: 29px;
   }
+
+  .tip-icon-last {
+    display: none;
+  }
+  
   .tip-symbols {
     display: none;
   }
