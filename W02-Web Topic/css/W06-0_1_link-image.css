@@ -418,3 +418,42 @@ body {
 .tip-box span {
   color: red;
 }
+
+@media (max-width: 760px) {
+  .site-header,
+  .main-layout,
+  .example-content {
+    display: block;
+  }
+  .main-nav {
+    margin-top: 10px;
+    overflow-x: auto;
+  }
+  .nav-list {
+    width: max-content;
+  }
+  .hero {
+    gap: 12px;
+  }
+  .hero-photo {
+    display: none;
+  }
+  .right-sidebar {
+    margin-top: 12px;
+  }
+  .tip-box {
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px;
+    font-size: 11px;
+  }
+  .tip-icon {
+    flex-basis: 46px;
+    width: 46px;
+    height: 46px;
+    font-size: 29px;
+  }
+  .tip-symbols {
+    display: none;
+  }
+}
