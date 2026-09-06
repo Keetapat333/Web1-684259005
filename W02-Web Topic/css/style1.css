@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background-color: transparent; */
+  background-image: linear-gradient(0deg, #2f2552, #1d124a, #170e3c, #141024);
+  background-attachment: fixed;
+}
+
+/* Header */
+.header {
+  padding: 20px 50px;
+  position: sticky;
+  top: 0;
+}
+.header span {
+  color: #ffffff;
+  font-weight: bold;
+}
+/* Side Navigation */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #23154c;
+  overflow-x: hidden;
+  transition: 1.0s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 46px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/* Hero Section */
+.hero {
+  color: #ffffff;
+}
+
+.footer {
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}

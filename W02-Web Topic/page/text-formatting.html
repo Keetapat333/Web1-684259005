@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learning about HTML" />
+  <title>HTML Tutorial : 684259005</title>
+  <link rel="stylesheet" href="../css/style1.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <!-- header -->
+  <header class="header d-flex flex-wrap justify-content-center py-3 mb-4">
+
+    <!-- Side Navigation -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <ul class="nav flex-column">
+          <li><a href="../index.html">Introduction to HTML</a></li>
+          <li><a href="htmldocument.html">HTML Document Structure</a></li>
+          <li><a href="heading.html">Heading</a></li>
+          <li><a href="paragraph.html">Paragraph</a></li>
+          <li><a href="text-formatting.html">Text Formatting</a></li>
+          <li><a href="creating.html">Creating</a></li>
+          <li><a href="lists.html">Lists (Ordered and Unordered)</a></li>
+          <li><a href="links-images.html">Link and Images</a></li>
+          <li><a href="forms.html">HTML Forms</a></li>
+          <li><a href="multimedia.html">Embedding Multimedia (Audio & Video)</a></li>
+          <li><a href="semantic.html">Semantic HTML</a></li>
+      </ul>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "300px";
+      }
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+    <!--  -->
+
+    <a href="#" class="d-flex align-items-center ps-3 mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <span class="fs-4 ">HTML Tutorial</span>
+    </a>
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="../index.html" class="nav-link active" aria-current="page">Home</a></li>
+      <li class="nav-item"><a href="https://www.w3schools.com/" class="nav-link" target="_blank">W3 Schools</a></li>
+    </ul>
+  </header>
+
+
+    <!-- Hero Paragraph -->
+  <div class="hero px-4 py-5 my-5 mb-5">
+    <h1 class="display-5 fw-bold text-center pb-4">Text Formatting</h1>
+    <p class="fs-5 text-center pb-4">HTML provides several tags for formatting text...</p>
+
+    <div class="col-lg-6 mx-auto">
+      <span class="fs-5 pb-4">
+        <pre>
+- &lt;h1&gt; to &lt;h6&gt;: Headings
+- &lt;p&gt;: Paragraph
+- &lt;pre&gt;: Preformatted text
+- &lt;b&gt;: Bold text
+- &lt;strong&gt;: Important text
+- &lt;i&gt;: Italic text
+- &lt;em&gt;: Emphasized text
+- &lt;u&gt;: Underline text
+- &lt;ins&gt;: Inserted text
+- &lt;del&gt;: Deleted text
+- &lt;s&gt;: Strikethrough text
+- &lt;strike&gt;: Strikethrough text
+- &lt;small&gt;: Smaller text
+- &lt;big&gt;: Big text
+- &lt;mark&gt;: Marked/highlighted text
+- &lt;sub&gt;: Subscript text
+- &lt;sup&gt;: Superscript text
+- &lt;blockquote&gt;: Block quotation
+- &lt;q&gt;: Inline quotation
+- &lt;code&gt;: Code snippet
+        </pre>
+      </span>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center pt-4"> 
+        <a href="../formatting.html"><button type="button"class="btn btn-primary btn-lg px-4 gap-3">Workshop</button></a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Footer -->
+  <footer class="flex text-light justify-content text-center py-3 mt-5">
+    <div class="container">
+        <p>&copy: 2026 Created by: 684259005 : Keetapat</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
