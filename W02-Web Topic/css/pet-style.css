@@ -151,6 +151,56 @@ nav a:hover {
     color: var(--text-sub-color);
 }
 
+/* Recommend */
+.Recommend {
+    padding: 1.25rem;
+    margin: 2.25rem 0;
+    background-color: #ffff;
+    border-radius: 24px;
+}
+
+.Recommend h2 {
+    color: var(--primary-color);
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.Recommend-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+.recommend-item1 {
+    border-radius: 24px;
+    box-shadow: var(--cad-shodow);
+    background-color: #d48f8f;
+    overflow: hidden;
+    padding: 1rem;      
+}
+
+.recommend-item2 {
+    border-radius: 24px;
+    box-shadow: var(--cad-shodow);
+    background-color: #cdd77d;
+    overflow: hidden;
+    padding: 1rem;      
+}
+.recommend-item3 {
+    border-radius: 24px;
+    box-shadow: var(--cad-shodow);
+    background-color: #76d5e4;
+    overflow: hidden;
+    padding: 1rem;      
+}
+.recommend-item4 {
+    border-radius: 24px;
+    box-shadow: var(--cad-shodow);
+    background-color: #ec95ff;
+    overflow: hidden;
+    padding: 1rem;      
+}
+
+
 /* footer */
 footer {
     background-color: var(--footer-bg-color);
