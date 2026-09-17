@@ -1,0 +1,336 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* font-size: 16px; */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #e5e6e9;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='575' height='575' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23487BB2' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23CA6CB7'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.container {
+  width: 1320px;
+  margin: 0 auto;
+}
+
+:root {
+  /* สีหลักของเว็บ */
+  --primary-color: rgba(207, 0, 0, 0.671);
+  --promary-dark-color: rgb(23, 60, 146);
+  --secondary-color: rgb(82, 82, 82);
+
+  /* สีข้อความ */
+  --text-color: black;
+  --text-sub-color: rgb(46, 34, 34);
+  --icon-color: rgb(185, 6, 6);
+
+  --nav-textcolor: rgb(17, 12, 12);
+  --light-text-color: #fff;
+  --btn-bg-color: rgb(30, 192, 103);
+
+  --muted-text-color: rgb(73, 62, 73);
+
+  /* สีพื้น */
+  --footer-bg-color: black;
+  --mute-bg-color: rgb(188, 205, 238);
+
+  /* สีเงา */
+  --cad-shodow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #818181b4;
+  backdrop-filter: blur(4px);
+}
+
+.container h2 {
+  text-align: center;
+  padding: 2rem;
+}
+
+.header-content {
+  color: var(--primary-color);
+  padding: 16px;
+  font-size: 18px;
+}
+
+.header-title {
+  color: var(--primary-color);
+}
+
+.header-subtitle {
+  color: var(--text-sub-color);
+}
+
+/* Nav */
+.category-nav {
+  padding-block: 2rem;
+  text-align: center;
+}
+
+.category-nav label {
+  color: var(--nav-textcolor);
+  padding: 0.65rem 1.2rem;
+  box-shadow: var(--cad-shodow);
+  border-radius: 24px;
+  background-color: var(--light-text-color);
+  margin: 0 4px;
+  transition: 0.2s;
+  display: inline-block;
+}
+
+.active {
+  color: var(--light-text-color);
+  background-color: var(--btn-bg-color);
+}
+
+.category-nav label:hover {
+  transform: translateY(-10px);
+}
+/* ซ่อนปุ่ม radio */
+.filter-radio {
+  /* display: none; */
+
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+/* แสดงปุ่ม */
+#filter-all:checked ~ .category-nav label[for="filter-all"],
+#filter-dog:checked ~ .category-nav label[for="filter-dog"],
+#filter-cat:checked ~ .category-nav label[for="filter-cat"],
+#filter-bird:checked ~ .category-nav label[for="filter-bird"],
+#filter-fish:checked ~ .category-nav label[for="filter-fish"],
+#filter-small:checked ~ .category-nav label[for="filter-small"]
+ {
+  background-color: var(--secondary-color);
+  color: var(--light-text-color);
+}
+/* ซ่อนหัวข้อ */
+.category-hide {
+  display: none;
+}
+/* แสดงหัวข้อ */
+#filter-all:checked ~ main .show-all,
+#filter-dog:checked ~ main .show-dog,
+#filter-cat:checked ~ main .show-cat,
+#filter-bird:checked ~ main .show-bird,
+#filter-fish:checked ~ main .show-fish,
+#filter-small:checked ~ main .show-small
+ {
+ display: inline;
+}
+
+/* ซ่อนการ์ดสัตว์ */
+#filter-dog:checked ~ main .pet-card,
+#filter-cat:checked ~ main .pet-card,
+#filter-bird:checked ~ main .pet-card,
+#filter-fish:checked ~ main .pet-card,
+#filter-small:checked ~ main .pet-card
+ {
+display: none;
+}
+
+/* โชการ์ดสัตว์ */
+#filter-dog:checked ~ main .show-dog, 
+#filter-cat:checked ~ main .show-cat, 
+#filter-bird:checked ~ main .show-bird, 
+#filter-fish:checked ~ main .show-fish, 
+#filter-small:checked ~ main .show-small 
+{
+  display: block;
+} 
+
+/* main */
+/* .page-title {} */
+
+.pet-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.pet-card {
+  border-radius: 24px;
+  box-shadow: var(--cad-shodow);
+  background-color: #ffff;
+  overflow: hidden;
+  transition: 0.1s;
+}
+
+.pet-card:hover {
+  transform: translateY(-10px);
+}
+
+.pet-card img {
+  height: 16.25rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.pet-content {
+  padding: 1.25rem 2rem;
+}
+
+.pet-content h2 {
+  color: var(--primary-color);
+}
+
+.breed {
+  color: var(--text-sub-color);
+}
+
+/* Recommend */
+.Recommend {
+  padding: 1.25rem;
+  margin: 2.25rem 0;
+  background-color: #ffff;
+  border-radius: 24px;
+    box-shadow: var(--cad-shodow);
+
+}
+
+.Recommend h2 {
+  color: var(--primary-color);
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.Recommend-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+.recommend-item1 {
+  border-radius: 24px;
+  box-shadow: var(--cad-shodow);
+  background-color: #d48f8f;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.recommend-item2 {
+  border-radius: 24px;
+  box-shadow: var(--cad-shodow);
+  background-color: #cdd77d;
+  overflow: hidden;
+  padding: 1rem;
+}
+.recommend-item3 {
+  border-radius: 24px;
+  box-shadow: var(--cad-shodow);
+  background-color: #76d5e4;
+  overflow: hidden;
+  padding: 1rem;
+}
+.recommend-item4 {
+  border-radius: 24px;
+  box-shadow: var(--cad-shodow);
+  background-color: #ec95ff;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+
+/* Form-Radio */
+.form-radio {
+    padding: 1.25rem;
+  margin: 2.25rem 0;
+  background-color: #ffff;
+  border-radius: 24px;
+  box-shadow: var(--cad-shodow);
+}
+
+.form-radio h2 {
+text-align: center;
+color: var(--primary-color-color);
+}
+
+.form-radio p {
+  text-align: center;
+  color: var(--secondary-color);
+  margin-bottom: 0.8rem;
+}
+
+.form-radio fieldset {
+  padding: 1.5rem;
+  border:3px solid #c9c9c9;
+  border-radius: 0.7rem;
+}
+
+.radio-option {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.form-radio legend {
+  padding: 0 0.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.radio-item label {
+  background-color: var(--mute-bg-color);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+
+  cursor: pointer;
+}
+
+.radio-item input {
+  accent-color: var(--secondary-color);
+}
+
+.radio-item input:checked + label {
+  background-color: var(--secondary-color);
+  color: var(--light-text-color);
+}
+
+.reset-btn {
+  background-color: var(--btn-bg-color);
+  color: var(--light-text-color);
+
+  padding: 0.5rem;
+
+  cursor: pointer;
+
+  border-radius: 0.5rem;
+  border: none;
+
+  margin: 1.5rem auto 0;
+display: block;
+
+}
+
+
+
+/* footer */
+footer {
+  background-color: var(--footer-bg-color);
+  color: var(--light-text-color);
+  padding-block: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
