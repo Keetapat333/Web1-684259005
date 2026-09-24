@@ -33,6 +33,10 @@ body {
   --text-sub-color: rgb(46, 34, 34);
   --icon-color: rgb(185, 6, 6);
 
+  --red-textcolor:red;
+  --green-textcolor:rgb(6, 187, 75);
+  --blue-textcolor:rgb(6, 100, 187);
+
   --nav-textcolor: rgb(17, 12, 12);
   --light-text-color: #fff;
   --btn-bg-color: rgb(30, 192, 103);
@@ -56,8 +60,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: #818181b4;
   backdrop-filter: blur(4px);
+  width: 100%;
 }
 
 .container h2 {
@@ -165,7 +169,8 @@ display: none;
 
 .pet-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 1.5rem;
 }
 
@@ -199,6 +204,54 @@ display: none;
 .breed {
   color: var(--text-sub-color);
 }
+/* ปุ่มซ่อน แสดง รายละเอียด */
+.pet-info {
+  list-style-type: none;
+  margin-block: 1rem;
+}
+
+.pet-info li {
+  margin-bottom: 0.35rem ;
+}
+.pet-details summary {
+  list-style: none;
+}
+
+.pet-btn {
+  background-color: var(--primary-color);
+  padding:0.5rem ;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: var(--cad-shodow);
+  color: var(--light-text-color);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.hide-detail {display: none;}
+.pet-details[open] .hide-detail {
+  display: inline;
+}
+.pet-details[open] .show-detail {
+  display: none;
+}
+
+.pet-details-body {
+  margin-top: 1rem;
+
+  animation: appear .5s ease-out;
+}
+.pet-details-body section + section {
+  margin-top: 1rem;
+}
+.pet-btn:hover {
+  background-color: var(--promary-dark-color);
+  transform: scale(1.1);
+}
+
+.info-lifespan { color: var(--red-textcolor);}
+.info-size{ color: var(--blue-textcolor)}
+.info-temperament {color: var(--green-textcolor);}
 
 /* Recommend */
 .Recommend {
@@ -208,6 +261,11 @@ display: none;
   border-radius: 24px;
     box-shadow: var(--cad-shodow);
 
+}
+
+@keyframes appear {
+  from {opacity: 0; transform: translateY(-55);}
+  to {opacity: 1; transform: translateY(0);}
 }
 
 .Recommend h2 {
@@ -324,7 +382,51 @@ display: block;
 
 }
 
+/* table */
+.pet-table {
+  border-collapse: collapse;
+  margin-top: 2rem;
 
+  table-layout: fixed;
+}
+
+.pet-table td,
+.pet-table th {
+  border:1px solid rgb(0, 0, 0);
+  padding: 12px;
+
+  vertical-align: top;
+
+  overflow-wrap: break-word;
+}
+
+.pet-table thead th {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+}
+.pet-table thead th {
+ width: 200px;
+}
+.pet-table tbody th {
+  background-color: rgb(194, 239, 253);
+  color: var(--text-sub-color);
+  text-align: left;
+
+}
+
+.pet-table thead th:nth-child(1) {width: 300px;}
+.pet-table thead th:nth-child(2) {width: 400px;}
+.pet-table thead th:nth-child(3) {width: 200px;}
+.pet-table thead th:nth-child(4) {width: 400px;}
+.pet-table thead th:nth-child(5) {width: 200px;}
+
+.pet-table caption {
+  margin: 0 0 8px 0;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-align: left;
+  /* caption-side: bottom; */
+}
 
 /* footer */
 footer {
@@ -333,4 +435,29 @@ footer {
   padding-block: 2rem;
   margin-top: 2rem;
   text-align: center;
+}
+
+
+/* responsive */
+
+@media (max-width: 992px) {
+    .pet-grid {
+        /* grid-template-columns: repeat(4, 1fr); */
+    }
+
+
+}
+
+/* mobile */
+@media (max-width: 768px) {
+    .pet-grid {
+        /* grid-template-columns: repeat(1, 1fr); */
+    }
+
+    .category-nav label {
+      display: block;
+      margin-bottom: 10px;
+
+      border-radius: 20px;
+    }
 }
