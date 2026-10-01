@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="../css/custome.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-paw"></i> คู่มือสัตว์เลี้ยง</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">ทั้งหมด</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">สุนัข</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">แมว</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">นก</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ปลา</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">สัตว์เล็ก</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li> -->
+                        <!-- <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li> -->
+                    </ul>
+                    <!-- <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form> -->
+                    <!-- ปุ่ม Dark/light Mode -->
+
+                    <button id="themeToggle" class="btn btn-primary">
+                        🌙 Dark
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel"
+        data-bs-interval="1000">
+
+        <!-- ปุ่มบอกลำดับภาพ -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+        </div>
+
+        <!-- รูปภาพ -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1734966213753-1b361564bab4?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+                    class="d-block w-100" alt="สุนัขโกลเด้น รีทรีฟเวอร์">
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1568152950566-c1bf43f4ab28?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+                    class="d-block w-100" alt="แมวสยาม">
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1584888890205-9b49eaf0c660?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+                    class="d-block w-100" alt="นกแก้วสีสันสวยงาม">
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1622349817799-067c32295df2?auto=format&amp;fit=crop&amp;w=1600&amp;q=85"
+                    class="d-block w-100" alt="กระต่ายสีขาว">
+            </div>
+        </div>
+        <!-- ปุ่มเลื่อนหน้าหลัง -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <main class="main">
+        <div class="container">
+
+            <!-- ปุ่มกดเลือกหมวดหมู่สัตว์ -->
+            <div class="category-filter" id="categoryFilter">
+                <!-- javascript จะ rander เนื้อหาตรงนี้ -->
+            </div>
+
+            <!-- การ์ดภาพสัตว์ -->
+            <div class="pet-grid" id="petGrid">
+                <!-- javascript จะ rander เนื้อหาตรงนี้ -->
+
+            </div>
+
+        </div>
+    </main>
+
+
+    <section class="Recommend">
+        <h2>💡 คำแนะนำในการเลือกสัตว์เลี้ยง</h2>
+
+        <div class="Recommend-grid ">
+
+            <div class="card card-body bg-body-tertiary info-primary ">
+                <h3 class="title text-primary">พิจารณาไลฟ์สไตล์ของคุณ</h3>
+                <p class="card-text">หากคุณมีเวลาจำกัด สัตว์เลี้ยงอย่าง ปลาหรือแมวอาจเหมาะกับคุณมากกว่า
+                    สุนัขที่ต้องการความใส่ใจมาก
+                </p>
+            </div>
+            <div class="card card-body bg-body-tertiary info-success">
+                <h3 class="title text-success">พื้นที่อยู่อาศัย
+                </h3>
+                <p class="card-text">ห้องเล็กหรือคอนโดอาจไม่เหมาะกับ สุนัขพันธุ์ใหญ่ แต่เหมาะกับแมว กระต่าย
+                    หรือหนูแฮมสเตอร์
+                </p>
+            </div>
+            <div class="card card-body bg-body-tertiary info-danger">
+                <h3 class="title text-danger">งบประมาณ
+                </h3>
+                <p class="card-text">นอกจากค่าอาหารแล้ว ยังต้องคิดถึงค่า รักษาพยาบาล ค่าอุปกรณ์ และค่าใช้ จ่ายอื่น ๆ
+                </p>
+            </div>
+            <div class="card card-body bg-body-tertiary info-warning">
+                <h3 class="title text-warning">อายุขัยของสัตว์
+                </h3>
+                <p class="card-text">นกแก้วสามารถมีชีวิตได้ถึง 80 ปี ใน ขณะที่หนูแฮมสเตอร์มีอายุเพียง 2-3 ปี
+                    จึงควรพิจารณาภาระผูกพันระยะยาว
+                </p>
+            </div>
+        </div>
+
+        <!-- table -->
+        <div class="table-responsive">
+            <table class="pet-table">
+                <caption>
+                    ตารางเปรียบเทียบสัตว์เลี้ยงแต่ละประเภท
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">ประเภทสัตว์เลี้ยง</th>
+                        <th scope="col">เหมาะสำหรับ</th>
+                        <th scope="col">พื้นที่ที่ต้องการ</th>
+                        <th scope="col">การดูแล</th>
+                        <th scope="col">ค่าใช้จ่าย</th>
+                    </tr>
+                </thead>
+
+                <!-- scope="col" ช่วยด้าน Accessibility ทำให้โปรแกรมอ่านหน้าจอเข้าใจอย่างชัดเจนว่าเซลล์นี้เป็นหัวข้อของคอลัมน์ใด -->
+
+
+                <tbody>
+                    <tr>
+                        <th scope="row">🐕 สุนัข</th>
+                        <td>ผู้ที่มีเวลาและชอบทำกิจกรรม
+                            https://example.com/animals/dog/verylongaddresswithoutspaces
+                        </td>
+                        <td>ปานกลางถึงมาก</td>
+                        <td>ต้องพาออกกำลังกายและดูแลเป็นประจำ</td>
+                        <td>ปานกลางถึงสูง</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">🐱 แมว</th>
+                        <td>ผู้ที่ต้องการสัตว์เลี้ยงค่อนข้างอิสระ</td>
+                        <td>น้อยถึงปานกลาง</td>
+                        <td>ดูแลกระบะทราย อาหาร และสุขภาพ</td>
+                        <td>ปานกลาง</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">🦜 นก</th>
+                        <td>ผู้ที่ชอบสัตว์ร่าเริงและมีเสียง</td>
+                        <td>น้อย</td>
+                        <td>ทำความสะอาดกรงและให้เวลาเข้าสังคม</td>
+                        <td>ต่ำถึงปานกลาง</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">🐟 ปลา</th>
+                        <td>ผู้ที่มีเวลาจำกัดและชอบความสงบ</td>
+                        <td>น้อยถึงปานกลาง</td>
+                        <td>ควบคุมคุณภาพน้ำและทำความสะอาดตู้</td>
+                        <td>ต่ำถึงปานกลาง</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">🐰 สัตว์ขนาดเล็ก</th>
+                        <td>ผู้ที่มีพื้นที่จำกัด</td>
+                        <td>น้อย</td>
+                        <td>ทำความสะอาดกรงและให้อาหารที่เหมาะสม</td>
+                        <td>ต่ำถึงปานกลาง</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="guide-note">
+            ⚠️ ก่อนเลือกสัตว์เลี้ยง ควรพิจารณาเวลา พื้นที่
+            ค่าใช้จ่าย และความพร้อมในการดูแลระยะยาว
+        </p>
+
+    </section>
+
+
+    <footer class="footer mt-auto py-3 bg-body-tertiary">
+        <div class="container-fluid text-center d-flex justify-content-center">
+            <span class="text-body-secondary">&copy; 2026 คู่มือสัตว์</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

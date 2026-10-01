@@ -1,0 +1,274 @@
+:root {
+  /* สีหลักของเว็บ */
+  --primary-color: rgba(207, 0, 0, 0.671);
+  --promary-dark-color: rgb(23, 60, 146);
+  --secondary-color: rgb(82, 82, 82);
+
+  /* สีข้อความ */
+  --text-color: black;
+  --text-sub-color: rgb(46, 34, 34);
+  --icon-color: rgb(185, 6, 6);
+
+  --red-textcolor:red;
+  --green-textcolor:rgb(6, 187, 75);
+  --blue-textcolor:rgb(6, 100, 187);
+
+  --nav-textcolor: rgb(17, 12, 12);
+  --light-text-color: #fff;
+  --btn-bg-color: rgb(30, 192, 103);
+
+  --muted-text-color: rgb(73, 62, 73);
+
+  /* สีพื้น */
+  --footer-bg-color: black;
+  --mute-bg-color: rgb(188, 205, 238);
+
+  /* สีเงา */
+  --cad-shodow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.Recommend-grid .info-primary {
+    border-left: blue 5px solid;
+}
+.Recommend-grid .info-success {
+    border-left: rgb(24, 197, 18) 5px solid;
+}
+.Recommend-grid .info-danger {
+    border-left: rgb(255, 17, 0) 5px solid;
+}
+.Recommend-grid .info-warning {
+    border-left: rgb(225, 228, 59) 5px solid;
+}
+
+
+.carousel-inner .carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+    object-position: top;
+
+    width: 100%;
+    height: calc(100vh-160px);
+}
+
+.pet-info {
+  list-style-type: none;
+  margin-block: 1rem;
+}
+
+.pet-info li {
+  margin-bottom: 0.35rem ;
+}
+.pet-details summary {
+  list-style: none;
+}
+
+.pet-btn {
+  background-color: var(--primary-color);
+  padding:0.5rem ;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: var(--cad-shodow);
+  color: var(--light-text-color);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.Recommend {
+  padding: 1.25rem;
+  margin: 2.25rem 0;
+  /* background-color: #ffff; */
+  border-radius: 24px;
+    box-shadow: var(--cad-shodow);
+
+}
+
+@keyframes appear {
+  from {opacity: 0; transform: translateY(-55);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.Recommend h2 {
+  color: var(--primary-color);
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.Recommend-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+.recommend-item1 {
+  border-radius: 24px;
+  box-shadow: var(--cad-shodow);
+  background-color: #d48f8f;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.recommend-item2 {
+  border-radius: 24px;
+  box-shadow: var(--cad-shodow);
+  background-color: #cdd77d;
+  overflow: hidden;
+  padding: 1rem;
+}
+.recommend-item3 {
+  border-radius: 24px;
+  box-shadow: var(--cad-shodow);
+  background-color: #76d5e4;
+  overflow: hidden;
+  padding: 1rem;
+}
+.recommend-item4 {
+  border-radius: 24px;
+  box-shadow: var(--cad-shodow);
+  background-color: #ec95ff;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+/* table */
+.pet-table {
+  border-collapse: collapse;
+  margin-top: 2rem;
+
+  table-layout: fixed;
+}
+
+.pet-table td,
+.pet-table th {
+  border:1px solid rgb(0, 0, 0);
+  padding: 12px;
+
+  vertical-align: top;
+
+  overflow-wrap: break-word;
+}
+
+.pet-table thead th {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+}
+.pet-table thead th {
+ width: 200px;
+}
+.pet-table tbody th {
+  background-color: rgb(194, 239, 253);
+  /* color: var(--text-sub-color); */
+  text-align: left;
+
+}
+
+
+.pet-table thead th:nth-child(1) {width: 200px;}
+.pet-table thead th:nth-child(2) {width: 400px;}
+.pet-table thead th:nth-child(3) {width: 200px;}
+.pet-table thead th:nth-child(4) {width: 400px;}
+.pet-table thead th:nth-child(5) {width: 200px;}
+
+.pet-table tbody tr:nth-child(even) {
+  background-color: #588b62;
+}
+
+.pet-table tbody tr:hover {
+  background-color: #9e9e9d;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.pet-table caption {
+  margin: 0 0 8px 0;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-align: left;
+  /* caption-side: bottom; */
+}
+
+.pet-grid {
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 1.5rem;
+}
+
+.pet-card {
+  border-radius: 24px;
+  box-shadow: var(--cad-shodow);
+  background-color: #ffff;
+  overflow: hidden;
+  transition: 0.1s;
+}
+
+.pet-card:hover {
+  transform: translateY(-10px);
+}
+
+.pet-card img {
+  height: 16.25rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.pet-content {
+  padding: 1.25rem 2rem;
+}
+
+.pet-content h2 {
+  color: var(--primary-color);
+}
+
+.breed {
+  color: var(--text-sub-color);
+}
+
+.category-btn {
+  padding-block: 2rem;
+  text-align: center;
+}
+
+.category-btn label {
+  color: var(--nav-textcolor);
+  padding: 0.65rem 1.2rem;
+  box-shadow: var(--cad-shodow);
+  border-radius: 24px;
+  background-color: var(--light-text-color);
+  margin: 0 4px;
+  transition: 0.2s;
+  display: inline-block;
+}
+
+.active {
+  color: var(--light-text-color);
+  background-color: var(--btn-bg-color);
+}
+
+.category-btn label:hover {
+  transform: translateY(-10px);
+}
+/* ซ่อนปุ่ม radio */
+.filter-radio {
+  /* display: none; */
+
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+/* แสดงปุ่ม */
+#filter-all:checked ~ .category-btn label[for="filter-all"],
+#filter-dog:checked ~ .category-btn label[for="filter-dog"],
+#filter-cat:checked ~ .category-btn label[for="filter-cat"],
+#filter-bird:checked ~ .category-btn label[for="filter-bird"],
+#filter-fish:checked ~ .category-btn label[for="filter-fish"],
+#filter-small:checked ~ .category-btn label[for="filter-small"]
+ {
+  background-color: var(--secondary-color);
+  color: var(--light-text-color);
+}
+
+
