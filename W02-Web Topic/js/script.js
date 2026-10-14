@@ -1,7 +1,7 @@
+
 // const สร้างตัวแปรที่ไม่สามารถกำหนดค่าใหม่ภายหลังได้
 // let ใช้ประกาศตัวแปรที่สามารถเปลี่ยนค่าได้ภายหลัง
-
-// ข้อมูลสัตว์เลี้ยง
+// // ข้อมูลสัตว์เลี้ยง
 const pets = [
     {
         id: 1,
@@ -171,7 +171,7 @@ function renderCategories() {
     categoryFilter.innerHTML = categories.map(category => `
         <button
         class="category-btn ${selectedCategory === category.value ? 'active' : ''}"
-        onclick="selectCategory('${category.value}')"
+        onclick="selectCategory('${category.value}', this)"
         >
         <span>${category.icon}</span>
         <span>${category.name}</span>
@@ -223,11 +223,32 @@ function renderCategories() {
 // class="category-btn ${selectedCategory === category.value ? 'active' : ''}"
 // 4) เรียกฟังก์ชัน renderPets() เพื่อกรองและแสดงสัตว์ตามหมวดหมู่ที่เลือก
 
- function selectCategory(category) {
-     selectedCategory = category;
-     renderCategories();
-     renderPets();
- }
+
+function selectCategory(category, button) {
+
+    // จำหมวดหมู่ที่เลือก
+    selectedCategory = category;
+
+    // เอา active ออกจากทุกเมนู
+    document.querySelectorAll('.navbar-nav .nav-link')
+        .forEach(item => {
+            item.classList.remove('active');
+        });
+
+    // เพิ่ม active ให้ปุ่มที่คลิก
+    button.classList.add('active');
+
+    // แสดงหมวดหมู่
+    renderCategories();
+
+    // แสดงสัตว์
+    renderPets();
+}
+//  function selectCategory(category) {
+//      selectedCategory = category;
+//      renderCategories();
+//      renderPets();
+//  }
 
  
 
@@ -343,7 +364,6 @@ function toggleDetails(petId) {
         btnText.textContent = 'ดูรายละเอียด';
     }
 }
-
 // =============================================
 // (1) เริ่มต้น
 // =============================================
@@ -363,5 +383,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // เรียก renderPets() เพื่อแสดงรายการสัตว์เลี้ยง
     renderCategories();
     renderPets();
+ 
  
 });

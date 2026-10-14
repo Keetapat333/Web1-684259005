@@ -262,6 +262,23 @@
         crossorigin="anonymous"></script>
 
     <script src="../js/script.js"></script>
+        <script>
+        const button = document.getElementById("themeToggle");
+
+        button.addEventListener("click", () => {
+
+            const html = document.documentElement;
+
+            if (html.getAttribute("data-bs-theme") === "dark") {
+                html.setAttribute("data-bs-theme", "light");
+                button.textContent = "🌙 Dark";
+            } else {
+                html.setAttribute("data-bs-theme", "dark");
+                button.textContent = "☀️ Light";
+            }
+
+        });
+    </script>
 </body>
 
 </html>
